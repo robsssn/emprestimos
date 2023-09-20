@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "1c0b793d-9978-42c2-bfb0-5ffa946cd938",
+		"name": "emprestimo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Realizar emprestimo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valorEmprestimo\": 25000,\r\n    \"numeroParcelas\" : 24\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{emprestimos_base_url}}/emprestimos/1234567889",
+					"host": [
+						"{{emprestimos_base_url}}"
+					],
+					"path": [
+						"emprestimos",
+						"1234567889"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar emprestimos por identificador pessoa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{emprestimos_base_url}}/emprestimos/1234567889",
+					"host": [
+						"{{emprestimos_base_url}}"
+					],
+					"path": [
+						"emprestimos",
+						"1234567889"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

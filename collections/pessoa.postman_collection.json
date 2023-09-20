@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "0c099cb7-e77a-4489-bdf0-fbbd53334672",
+		"name": "pessoa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Alaide Iracema\",\r\n    \"dataNascimento\" :\"1956-11-15\",\r\n    \"identificador\" : \"1294567880\",\r\n    \"tipoIdentificador\" : \"AP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{emprestimos_base_url}}/pessoas",
+					"host": [
+						"{{emprestimos_base_url}}"
+					],
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{emprestimos_base_url}}/pessoas",
+					"host": [
+						"{{emprestimos_base_url}}"
+					],
+					"path": [
+						"pessoas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar pessoa",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\" : \"Nilton Jhon\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{emprestimos_base_url}}/pessoas/1",
+					"host": [
+						"{{emprestimos_base_url}}"
+					],
+					"path": [
+						"pessoas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{emprestimos_base_url}}/pessoas/7",
+					"host": [
+						"{{emprestimos_base_url}}"
+					],
+					"path": [
+						"pessoas",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
